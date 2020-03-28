@@ -57,7 +57,7 @@ namespace microservice2
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            // to enable the authentication process
             app.UseAuthentication();
             app.UseAuthorization();
 

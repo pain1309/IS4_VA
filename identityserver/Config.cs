@@ -12,6 +12,7 @@ namespace identityserver
         public static IEnumerable<IdentityResource> Ids =>
             new IdentityResource[]
             {
+                // represents the unique ID for the user
                 new IdentityResources.OpenId()
             };
 

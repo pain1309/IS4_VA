@@ -42,6 +42,7 @@ namespace identityserver
                 iis.AutomaticAuthentication = false;
             });
 
+            // add the IdentityServer services to the DI system 
             var builder = services.AddIdentityServer(options =>
             {
                 options.Events.RaiseErrorEvents = true;
@@ -88,7 +89,7 @@ namespace identityserver
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseIdentityServer();
+            app.UseIdentityServer();            
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
